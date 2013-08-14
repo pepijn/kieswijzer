@@ -93,6 +93,15 @@
           $scope.remaining = $scope.questions.length - $scope.answered;
         }, true)
 
+        $scope.showResults = function() {
+          $scope.results = []
+
+          angular.forEach($scope.score, function(score, commission) {
+            if (score < 3) return;
+
+            $scope.results.push({ name: commission, score: score })
+          });
+        }
       })
     </script>
   </head>
@@ -104,36 +113,43 @@
         Commissie Kieswijzer
       </h3>
 
-      <table class="table table-striped"> <tr ng-repeat="question in questions" class="row">
-        <td>
-          <i class="icon-check"></i>
-        </td>
+      <div ng-hide="results">
+        <table class="table table-striped">
+          <tr ng-repeat="question in questions" class="row">
+            <td>
+              <i class="icon-check"></i>
+            </td>
 
-        <td ng-class="{ 'text-muted': question.answer != null }" style="font-size: 17px">
-          <strong>{{question.question}}</strong>
-        </td>
+            <td ng-class="{ 'text-muted': question.answer != null }" style="font-size: 17px">
+              <strong>{{question.question}}</strong>
+            </td>
 
-        <td style="width: 150px">
-          <div class="btn-group pull-right">
-            <button type="button" class="btn" ng-model="question.answer" ng-class="{ 'btn-success': question.answer }" btn-radio="true">Ja</button>
-            <button type="button" class="btn" ng-model="question.answer" ng-class="{ 'btn-danger': question.answer == false }" btn-radio="false">Nee</button>
-            </div>
-          </td>
-        </tr>
-      </table>
+            <td style="width: 150px">
+              <div class="btn-group pull-right">
+                <button type="button" class="btn" ng-model="question.answer" ng-class="{ 'btn-success': question.answer }" btn-radio="true">Ja</button>
+                <button type="button" class="btn" ng-model="question.answer" ng-class="{ 'btn-danger': question.answer == false }" btn-radio="false">Nee</button>
+              </div>
+            </td>
+          </tr>
+        </table>
 
-      <div>
-        <button class="btn btn-lg btn-block btn-primary" ng-class="{ disabled: remaining > 0 }">Uitslag bekijken!</button>
+        <div>
+          <a href="#" class="btn btn-lg btn-block btn-primary" ng-class="{ disabled: remaining > 0 }" ng-click="showResults()">Uitslag bekijken!</a>
+        </div>
       </div>
 
-      <div ng-repeat="(name, score) in score">
-        <h4>{{name}} <span class="badge">{{score}}</span></h4>
-        <!--<p>{{commissions[name]}}</p>-->
+      <div ng-show="results">
+        <div ng-repeat="result in results | orderBy:'-score'">
+          <h3>{{result.name}} <span class="label label-success">{{result.score}} punten</span></h3>
+          <p>{{commissions[result.name]}}</p>
+        </div>
+
+        <a href="/" class="btn btn-lg btn-block btn-warning">Opnieuw proberen</a>
       </div>
     </div>
 
     <footer class="text-center text-muted" style="margin: 20px">
-      Met ♡ gemaakt door de internetcommissie
+      Met &#x2661; gemaakt door de internetcommissie
     </footer>
   </body>
 </html>
