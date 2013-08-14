@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app="kieswijzer">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.5.0/ui-bootstrap-tpls.min.js"></script>
+
+
+
+    <script>
+      kieswijzer = angular.module('kieswijzer', ['ui.bootstrap'])
+      kieswijzer.controller('AppCtrl', function($scope) {
+        $scope.commissions = [
+          { name: "Activiteiten", description: "De Activiteitencommissie organiseert door het hele jaar circa vier ontspannende, inspannende en leuke activiteiten. Op deze wijze kunnen de studenten uit elke jaarlaag elkaar op informele wijze beter leren kennen. Aan wat voor activiteiten moet je dan denken? De afgelopen jaren zijn er namelijk verschillende activiteiten georganiseerd. Zo zijn we een keer gaan schieten op de schietbaan, karten, paintballen tegen de VU, zwemmen in het Tikibad en hebben we een wijnproeverij gehad. De activiteiten die worden georganiseerd zijn dus hartstikke divers en altijd druk bezocht. Bovendien zijn ze hartstikke leuk om te organiseren. Lijkt het je wat om volgend jaar in een commissie te zitten die zorgt voor actieve ontspanning, dan is de Activiteitencommissie wellicht wat voor jou." },
+          { name: "Almanakcommissie", description: "Zoals de naam al zegt, zorgt de Almanakcommissie er voor dat er elk jaar een almanak uit komt. Dit boekwerk bevat informatie, stukjes en foto’s  van  jouw  studiejaar. Zo staan er stukjes in van bijvoorbeeld de coördinatoren, het MFAS Bestuur, alle verschillende commissies en zelfs de burgemeester van Amsterdam. Ook is het beruchte smoelenboek een onderdeel van de almanak. Hierin staan de foto’s van alle studenten van Geneeskunde op het AMC. De Almanakcommissie  kiest elk jaar een ander thema, ze verzorgen de lay-out en zorgen dat al dat werk gestructureerd verloopt en op tijd af is. In de Almanakcommissie kan je dus al je creativiteit kwijt en kan je na een paar maanden hard werken terug kijken op iets moois en tastbaars." },
+          { name: "Bandjescommissie", description: "De Bandjescommissie houdt zich vooral bezig met live-muziek. Ze organiseren namelijk de bandjesavond. Deze avond wordt een keer in het jaar gehouden en is de afgelopen jaren steeds erg druk bezocht. De Bandjescommissie houdt zich bezig met het regelen van de locatie, het regelen van verschillende bandjes en misschien het regelen van iets extra’s zoals iets te eten voor iedereen. Na al deze voorbereiding is het tijd voor de avond zelf. Als alles tot in de puntjes is geregeld dan wordt dit echt een topavond. Je kan ook zelf een bandje vormen en optreden op de avond zelf. In de Bandjescommissie kan je dus je organisatorisch en muzikaal talent erg goed kwijt. Muzikaliteit is overigens geen vereiste, alleen een hoop enthousiasme is nodig om deze avond te laten slagen." }
+        ]
+
+        $scope.commissions = {
+          "Activiteitencommissie": "De Activiteitencommissie organiseert door het hele jaar circa vier ontspannende, inspannende en leuke activiteiten. Op deze wijze kunnen de studenten uit elke jaarlaag elkaar op informele wijze beter leren kennen. Aan wat voor activiteiten moet je dan denken? De afgelopen jaren zijn er namelijk verschillende activiteiten georganiseerd. Zo zijn we een keer gaan schieten op de schietbaan, karten, paintballen tegen de VU, zwemmen in het Tikibad en hebben we een wijnproeverij gehad. De activiteiten die worden georganiseerd zijn dus hartstikke divers en altijd druk bezocht. Bovendien zijn ze hartstikke leuk om te organiseren. Lijkt het je wat om volgend jaar in een commissie te zitten die zorgt voor actieve ontspanning, dan is de Activiteitencommissie wellicht wat voor jou.",
+          "Almanakcommissie": "Zoals de naam al zegt, zorgt de Almanakcommissie er voor dat er elk jaar een almanak uit komt. Dit boekwerk bevat informatie, stukjes en foto’s  van  jouw  studiejaar. Zo staan er stukjes in van bijvoorbeeld de coördinatoren, het MFAS Bestuur, alle verschillende commissies en zelfs de burgemeester van Amsterdam. Ook is het beruchte smoelenboek een onderdeel van de almanak. Hierin staan de foto’s van alle studenten van Geneeskunde op het AMC. De Almanakcommissie  kiest elk jaar een ander thema, ze verzorgen de lay-out en zorgen dat al dat werk gestructureerd verloopt en op tijd af is. In de Almanakcommissie kan je dus al je creativiteit kwijt en kan je na een paar maanden hard werken terug kijken op iets moois en tastbaars.",
+          "Bandjescommissie": "De Bandjescommissie houdt zich vooral bezig met live-muziek. Ze organiseren namelijk de bandjesavond. Deze avond wordt een keer in het jaar gehouden en is de afgelopen jaren steeds erg druk bezocht. De Bandjescommissie houdt zich bezig met het regelen van de locatie, het regelen van verschillende bandjes en misschien het regelen van iets extra’s zoals iets te eten voor iedereen. Na al deze voorbereiding is het tijd voor de avond zelf. Als alles tot in de puntjes is geregeld dan wordt dit echt een topavond. Je kan ook zelf een bandje vormen en optreden op de avond zelf. In de Bandjescommissie kan je dus je organisatorisch en muzikaal talent erg goed kwijt. Muzikaliteit is overigens geen vereiste, alleen een hoop enthousiasme is nodig om deze avond te laten slagen.",
+          "Buitenlandse reiscommissie": "De Buitenlandse Reis Commissie, afgekort BuReCo, is een commissie met ontzettend veel verantwoordelijkheid. Het is namelijk aan hen de taak om een reis naar het buitenland te organiseren voor ongeveer 50 man. Zij moeten een week zien vol te krijgen met culturele en leerzame uitstapjes en natuurlijk zorgen zij ook elke avond voor een andere kroeg om onveilig te maken. Waar gaan de reisjes nou heen? Afgelopen jaren zijn we naar bijvoorbeeld Istanbul, Zagreb, Sint Petersburg, Boedapest en Porto geweest. Het is een fantastische week die erg gewaardeerd wordt onder de MFAS-leden. Houd je van reisjes organiseren en ben je verantwoordelijk dan is de BuReCo misschien iets voor jou.",
+          "Congresdagcommissie": "De Congresdag-commissie organiseert, zoals de naam waarschijnlijk al suggereert, een congresdag. Dit is een dag in februari waarop onderwerpen aan bod komen die normaal gesproken niet tijdens je studie voorkomen. Er worden dan de gehele dag colleges en workshops gegeven over bijvoorbeeld forensische geneeskunde of over het thema grenzeloos. Het is een erg leuke een leerzame dag en ook altijd druk bezocht. De Congresdagcommissie heeft de taak om deze hele dag in elkaar te zetten. Ze verzinnen een thema en regelen daarbij alle sprekers, ook regelen ze een gratis lunch voor iedereen die komt. Na afloop van de dag is er ook nog tijd voor ontspanning in de bar van de MFAS.",
+          "Diesgala commissie": "De diesgala organiseert een gala op een historische dag voor de MFAS. Dies komt van dies natalis oftewel  geboortedag. De geboortedag van de MFAS is op 19 mei en op die dag wordt de MFAS aankomend jaar alweer 118 jaar oud. Om deze dag te vieren wordt er een gala georganiseerd, maar ook op de dag zelf zullen er activiteiten zijn en de week voor het gala wordt een barbecue in ons aller Epsteinbar gehouden om de verjaardag van de MFAS te vieren! Als je houdt van een feestje en het je leuk lijkt om verschillende soorten activiteiten te organiseren, is deze commissie misschien wel wat voor jou.",
+          "Eerstejaarsweekendcommissie": "EJW is de afkorting voor het EersteJaarsWeekend. Dit weekend wordt speciaal georganiseerd voor de eerstejaars, jullie dus. Het weekend vindt plaats na het eerste blok, een ideaal moment om lekker te ontspannen na de stress van het eerste blok. Dit weekend moet natuurlijk wel georganiseerd worden, dit gebeurt door de EJW-commissie. Het is een weekend vol activiteiten, feesten, gezelligheid en ontspanning. Omdat het weekend al in november valt, is het organiseren van dit weekend soms best hectisch. Eerstejaars kunnen helaas niet solliciteren voor deze commissie, omdat het weekend juist voor hen bedoeld is om mee te gaan.",
+          "Emphasisredactie": "De Emphasis is het verenigingsblad van de MFAS. Een soort schoolkrant alleen dan anders. De Emphasisredactie brengt om een bepaalde tijd het blad uit dat verstuurd wordt naar alle leden van de MFAS. De Emphasis heeft 2 kanten, de redactionele kant en de ontwerp kant. De redactie selecteert vooral de artikelen, bepaald waar het volgende thema over gaat, haalt de spelfouten eruit en schrijft zelf af en toe ook wat. De mensen van de lay-out ontwerpen de Emphasis.Het lay-outteam staat echter nog in een vroeg stadium, daarom is er veel mogelijk qua lay-out en kan je er helemaal je eigen twist aan geven.",
+          "Epsteinbarcommissie": "Dit zal jullie misschien een beetje verbazen, maar de MFAS heeft haar eigen bar. Een bar midden in het ziekenhuis! Op donderdagmiddag is er vanaf 17.00 uur een borrel voor alle leden van de MFAS, deze is in de Epsteinbar en duurt tot 22.30. Het is natuurlijk een grote verantwoordelijkheid om deze bar draaiende te houden. Denk hierbij aan bier inkopen, versiering kopen, feesten organiseren en natuurlijk tappen. Dit gebeurt allemaal door de Epsteinbarcommissie, zij zorgen er elke week weer voor dat het een gigantisch feest is in de bar. Ook tappen zij soms afdelingsborrels van het AMC. Dit is dus een erg intensieve en vooral leuke commissie.",
+          "Feestcommissie": "De naam van deze commissie spreekt eigenlijk voor zich. Zij organiseren elk jaar ongeveer drie feesten voor de leden van de MFAS. Deze feesten worden gehouden op leuke en unieke locaties in Amsterdam. Zo zijn er feesten geweest in club Barkode, bungalow 8, maar ook een party boat op het IJ heeft ons mogen ontvangen. Ook is het een gewoonte dat er aan elk feest een thema wordt gekoppeld, afgelopen jaar waren dit de thema’s Gender in the Blender, It Used To Be Cool en How Low Can You Glow. Niet zo van de thema’s maar meer van de muziek? Afgelopen jaar hebben DJ’s als Lucien Foort en Bakermat onze voetjes van de vloer laten gaan. Dus wil je zelf graag aan de gang met de leukste artiesten regelen, ook dan is de feestcommissie iets voor jou.",
+          "Internetcommissie": "De Internetcommissie is de commissie die zich bezig houdt met het ontwikkelen en optimaliseren van alle online bezigheden van de MFAS. Zo is er een hele nieuwe site ontwikkeld, is er een online boeken verkoop sinds dit jaar en hebben we ook een nieuwe mobiele site! Met de opkomst van het internet kan de MFAS nog veel dingen online gaan doen. Heb jij interesse om online alles te optimaliseren en eventueel nieuwe dingen ontwikkelen? Dan is de Internetcommissie wellicht wat voor jou.",
+          "Jaarvertegenwoordiging": "De JVT staat niet voor de Jeugd van Tegenwoordig maar voor de Jaarvertegenwoordiging. Elke jaarlaag heeft een groep van zes studenten die deze jaarlaag vertegenwoordigen. Zij letten tijdens het blok op waar de studenten allemaal mee zitten of waar ze juist heel tevreden mee zijn. Tijdens de evaluatie zitten zij met de docenten om de tafel om te bespreken wat er beter kan en wat er zo moet blijven in het desbetreffende blok. Zaken als studiezwaarte, organisatie en het aantal contacturen komen onder andere aan bod. Samen met de docenten proberen zij het onderwijs dat gegeven wordt te verbeteren.",
+          "MCD commissie": "De MCD commissie organiseert de jaarlijkse Medische Carrièredag. Deze dag is bedoeld voor coassistenten en vierdejaars geneeskunde studenten waarop zij zich kunnen oriënteren op de vele mogelijkheden die hun artsenbul hen zal bieden. Ook komen zij er op deze dag achter wat de opleiders in het ziekenhuis nu daadwerkelijk van hen verwachten. Hoe ziet een mooi CV eruit? En hoe maak je indruk tijdens je sollicitatie? Als MCD-commissie heb je enorme keuze in hoe je deze dag invulling wil geven. Er is veel mogelijk omdat er ook veel is wat je na je studie kan gaan doen.",
+          "Onderwijscommissie": "Deze commissie is een commissie die zich bezig houdt met extra-curriculaire activiteiten op het gebied van onderwijs. Dit zijn dus de onderwijsactiviteiten die je normaal gesproken niet tijdens je studie krijgt. Hier kan je dus bijvoorbeeld denken aan een Echoscopiecursus, een labwaardencursus, een anaesthesiologiecursus enzovoort. Ook is er jaarlijks een  herhalingsochtend voor het klinische lijn tentamen. Een erg leuke commissie dus, die gericht is op het onderwijs verbreden.",
+          "Ouderdagcommissie": "Deze commissie is speciaal in het leven geroepen voor de ouders van de eerstejaars, om de ouders een idee te geven wat hun kinderen nou eigenlijk doen op een dag op het AMC. Zo regelt de ouderdagcommissie een dag vol colleges en workshops voor de ouders. Er wordt bijvoorbeeld een klinisch college gegeven, een workshop op de snijzalen, een rondleiding door het AMC en de dag wordt natuurlijk afgesloten in de bar van de MFAS: de Epsteinbar. Erg leuk om te organiseren en het geeft veel voldoening als de ouders op het eind van de dag naar je toe komen om je te bedanken voor een ontzettend leuke en leerzame dag.",
+          "Sportcommissie": "Voor de sportievelingen onder jullie hebben we de sportcommissie. Deze commissie zorgt voor de sportieve activiteiten bij de MFAS. Deze commissie is afgelopen jaar voor het eerst opgericht. Het grootste evenement waar we aan mee deden was de Batavierenrace. Een hardloopestafette voor studenten van Nijmegen naar Enschede waar 8500 studenten aan meededen. Ook is er een interfacultair sporttoernooi georganiseerd tegen de VU. Ben jij een beetje sportief aangelegd en wil je graag sportieve activiteiten organiseren voor de rest van de leden? Dan is deze commissie misschien wat voor jou.",
+          "Zeilweekendcommissie": "Op het eind van het collegejaar is er een erg drukke periode met veel en zware tentamens. Na die tentamens is er weer een ideaal moment om eens te ontspannen voor dat het blok in juni begint. Daarom organiseert de zeilweekendcommissie voor iedereen die mee wil een zeilweekend. Een legendarisch weekend in Friesland dat in het teken staat van luieren, actief zeilen en feest.",
+          "Liftweekendcommissie": "Hoi",
+          "Cultuurcommissie": "Hoi"
+        }
+
+        $scope.questions = [
+          { question: "Het lijkt me leuk om in een commissie te zitten die meerdere activiteiten organiseert",
+            score: { "Activiteitencommissie": 6, "Cultuurcommissie": 3, Epsteinbarcommissie: 2, Onderwijscommissie: 4, Sportcommissie: 6 } },
+          { question: "Ik wil graag veel eigen invulling kunnen geven aan mijn evenement",
+            score: { "Activiteitencommissie": 6, "Buitenlandse reiscommissie": 2, Cultuurcommissie: 3, Emphasisredactie: 3, Epsteinbarcommissie: 2, Onderwijscommissie: 4, Sportcommissie: 6 } },
+          { question: "Ik vind het niet erg om een deel van de door mij georganiseerde activiteit te missen, vanwege last-minute organisatorische bezigheden",
+            score: { "Buitenlandse reiscommissie": 2, "Eerstejaarsweekendcommissie": 2, "Liftweekendcommissie": 6, Zeilweekendcommissie: 6 } },
+          { question: "Ik vind het leuk om iets medisch verdiepend te organiseren",
+            score: { Congresdagcommissie: 4, Jaarvertegenwoordiging: 6, "MCD commissie": 4, Onderwijscommissie: 4, Ouderdagcommissie: 6 } },
+          { question: "Een creatieve commissie spreekt mij aan",
+            score: { Almanakcommissie: 4, Bandjescommissie: 4, "Cultuurcommissie": 3, Emphasisredactie: 3, Internetcommissie: 4 } },
+          { question: "Ik kan goed met computers overweg",
+            score: { Almanakcommissie: 4, Emphasisredactie: 3, Internetcommissie: 4 } },
+          { question: "Cultuur interesseert me",
+            score: { "Buitenlandse reiscommissie": 2, Cultuurcommissie: 3 } },
+          { question: "Ik vind het niet erg om meer dan 4 uur per week met een commissie bezig te zijn",
+            score: { "Buitenlandse reiscommissie": 2, "Eerstejaarsweekendcommissie": 2, Epsteinbarcommissie: 2 } },
+          { question: "Het lijkt me leuk om een reis te organiseren",
+            score: { "Bandjescommissie": 4, "Buitenlandse reiscommissie": 2, "Congresdagcommissie": 4, "Diesgala commissie": 6, "Eerstejaarsweekendcommissie": 2, "Feestcommissie": 6, "Liftweekendcommissie": 6, "MCD commissie": 4 } },
+          { question: "Ik ken weinig schaamte",
+            score: { "Eerstejaarsweekendcommissie": 2, "Epsteinbarcommissie": 2, Feestcommissie: 3, Zeilweekendcommissie: 6 } },
+          { question: "Wat mij aanspreekt in een commissie is het leren kennen van mensen",
+            score: { Almanakcommissie: 4, Bandjescommissie: 4, Congresdagcommissie: 4, "Diesgala commissie": 6, "Eerstejaarsweekendcommissie": 2, "Emphasisredactie": 3, Epsteinbarcommissie: 2, Feestcommissie: 3, Internetcommissie: 4, Jaarvertegenwoordiging: 6, "MCD commissie": 4, Ouderdagcommissie: 6 } },
+          { question: "Ik wil graag intensief bezig zijn met een commissie",
+            score: { "Buitenlandse reiscommissie": 2, "Eerstejaarsweekendcommissie": 2, "Epsteinbarcommissie": 2 } }
+        ]
+
+        $scope.$watch('questions', function() {
+          $scope.answered = 0
+          $scope.score = {}
+
+          angular.forEach($scope.commissions, function(description, name) {
+            $scope.score[name] = 0
+          });
+
+          angular.forEach($scope.questions, function(question) {
+            if (question.answer != null)
+              $scope.answered++;
+
+            if (question.answer)
+              angular.forEach(question.score, function(points, name) {
+                $scope.score[name] += points;
+              });
+          })
+
+          $scope.remaining = $scope.questions.length - $scope.answered;
+        }, true)
+
+      })
+    </script>
+  </head>
+
+  <body>
+    <div class="container" ng-controller="AppCtrl">
+      <h3 class="text-center page-header">
+        <img src="images/mfas.png"><br>
+        Commissie Kieswijzer
+      </h3>
+
+      <table class="table table-striped"> <tr ng-repeat="question in questions" class="row">
+        <td>
+          <i class="icon-check"></i>
+        </td>
+
+        <td ng-class="{ 'text-muted': question.answer != null }" style="font-size: 17px">
+          <strong>{{question.question}}</strong>
+        </td>
+
+        <td style="width: 150px">
+          <div class="btn-group pull-right">
+            <button type="button" class="btn" ng-model="question.answer" ng-class="{ 'btn-success': question.answer }" btn-radio="true">Ja</button>
+            <button type="button" class="btn" ng-model="question.answer" ng-class="{ 'btn-danger': question.answer == false }" btn-radio="false">Nee</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div>
+        <button class="btn btn-lg btn-block btn-primary" ng-class="{ disabled: remaining > 0 }">Uitslag bekijken!</button>
+      </div>
+
+      <div ng-repeat="(name, score) in score">
+        <h4>{{name}} <span class="badge">{{score}}</span></h4>
+        <!--<p>{{commissions[name]}}</p>-->
+      </div>
+    </div>
+
+    <footer class="text-center text-muted" style="margin: 20px">
+      Met ♡ gemaakt door de internetcommissie
+    </footer>
+  </body>
+</html>
+
